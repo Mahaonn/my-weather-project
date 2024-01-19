@@ -46,7 +46,7 @@ function formatDate(date) {
   return `${formattedDay} ${hours}:${minutes}`;
 }
 
-let searchForm = document.querySelector("#search-form"); // оглашается переменная по имени searchForm, в которой прописывается результат поиска по id #search-form
+let searchForm = document.querySelector("#search-form"); // оглашается переменная по имени searchForm, в которой прописывается результат поиска по id #search-form. Это требуется для отслеживания действий пользователя в этом месте.
 searchForm.addEventListener("submit", search); // для переменной searchForm добавляется наблюдатель на событие "submit" (когда в форму вводится данные и нажимается кнопка), запускается функция search, прописання выше (обязательно).
 
 let currentDateELement = document.querySelector("#current-date");
