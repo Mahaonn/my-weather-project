@@ -1,0 +1,67 @@
+@import "reset.css";
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
+  padding: 40px 15px 50px;
+  background: radial-gradient(
+    780px at 37.8% 100.3%,
+    rgb(19, 55, 115) 2.2%,
+    rgb(32, 7, 80) 20.2%,
+    rgb(27, 88, 111) 58.6%,
+    rgb(115, 88, 44) 75%,
+    rgb(99, 19, 90) 89.6%,
+    rgb(12, 51, 76) 96.1%
+  );
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: wheat;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  width: 460px;
+  height: 40px;
+  background-color: whitesmoke;
+  border-radius: 0 8px 8px 0;
+}
+
+.search-city {
+  flex-grow: 1;
+  padding: 10px 15px;
+  font-weight: 300;
+  font-size: 18px;
+  color: dimgray;
+}
+
+.search-btn {
+  width: 144px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  color: whitesmoke;
+  background-color: rgb(98, 137, 176);
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background: rgb(51, 94, 138);
+}
