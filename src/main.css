@@ -4,6 +4,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: black;
 }
 
 .header {
@@ -64,4 +65,17 @@ body {
 
 .search-btn:hover {
   background: rgb(51, 94, 138);
+}
+
+.forecast-container {
+	position: relative;
+}
+
+.backdrop-light {
+	position: absolute;
+	width: 800px;
+	height: 50%;
+	background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+	opacity: 25%;
+	border-radius: 10px;
 }
