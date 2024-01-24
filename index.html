@@ -19,13 +19,13 @@
         <div class="weather-app">
           <div class="weather-app-data">
             <div>
-              <h1 class="weather-app-city" id="city"></h1>
+              <span id="time">17:00</span>
+              <h2 class="weather-app-city" id="city">London</h2>
+              <span id="description">sunny</span>
+              <img src="./images/sunny-night.png" width="150" />
               <p class="weather-app-details">
-                <span id="time"></span>,
-                <span id="description"></span>
-                <br />
-                Humidity: <strong id="humidity"></strong>, Wind:
-                <strong id="wind-speed"></strong>
+                Humidity: <strong id="humidity">87%</strong>, Wind:
+                <strong id="wind-speed">1</strong>
               </p>
             </div>
             <div class="weather-app-temperature-container">
@@ -38,52 +38,47 @@
         <div class="weather-app">
           <div class="weather-forecast">
             <div class="weather-forecast-day">
-              <img src="./images/sunny-night.png" width="100" />
+              <img src="./images/sunny-night.png" width="80" class="weather-forecast-icon"/>
               <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature">
-                  <strong>15º</strong>
+                  <strong>15º</strong><span>/9º</span>
                 </div>
-                <div class="weather-forecast-temperature"><span>/9º</span></div>
               </div>
               <div class="weather-forecast-date">Today</div>
             </div>
             <div class="weather-forecast-day">
-              <img src="./images/partly-cloudy-night-1.png" width="100" />
+              <img src="./images/partly-cloudy-night-1.png" width="80" />
               <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature">
-                  <strong>15º</strong>
+                  <strong>15º</strong><span>/9º</span>
                 </div>
-                <div class="weather-forecast-temperature"><span>/9º</span></div>
               </div>
               <div class="weather-forecast-date">Wed</div>
             </div>
             <div class="weather-forecast-day">
-              <img src="./images/partly-cloudy-night.png" width="100" />
+              <img src="./images/partly-cloudy-night.png" width="80" />
               <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature">
-                  <strong>15º</strong>
+                  <strong>15º</strong><span>/9º</span>
                 </div>
-                <div class="weather-forecast-temperature"><span>/9º</span></div>
               </div>
               <div class="weather-forecast-date">Wed</div>
             </div>
             <div class="weather-forecast-day">
-              <img src="./images/cloudy.png" width="100" />
+              <img src="./images/cloudy.png" width="80" />
               <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature">
-                  <strong>15º</strong>
+                  <strong>15º</strong><span>/9º</span>
                 </div>
-                <div class="weather-forecast-temperature"><span>/9º</span></div>
               </div>
               <div class="weather-forecast-date">Wed</div>
             </div>
             <div class="weather-forecast-day">
-              <img src="./images/snow-rain.png" width="100" />
+              <img src="./images/snow-rain.png" width="80" />
               <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature">
-                  <strong>15º</strong>
+                  <strong>15º</strong><span>/9º</span>
                 </div>
-                <div class="weather-forecast-temperature"><span>/9º</span></div>
               </div>
               <div class="weather-forecast-date">Wed</div>
             </div>
@@ -91,5 +86,20 @@
         </div>
       </div>
     </main>
+    <footer>
+      <p>
+        Coded by
+        <a href="https://github.com/Mahaonn" target="_blank">
+          Yevheniia Kovzikova</a
+        >, is open-sourced on
+        <a href="https://github.com/Mahaonn/weather-outside" target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://weather-outside-app.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
