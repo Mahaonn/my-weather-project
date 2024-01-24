@@ -2,6 +2,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
+:root {
+	--color-primary-light: #fff;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #4b4756;
@@ -39,7 +43,7 @@ body {
   justify-content: space-between;
   width: 460px;
   height: 40px;
-  background-color: whitesmoke;
+  background-color: rgb(200, 201, 222);
   border-radius: 0 8px 8px 0;
 }
 
@@ -76,8 +80,91 @@ a {
   opacity: 75%;
   max-width: 600px;
   margin: 45px auto;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.665);
   border-radius: 10px;
-  padding: 30px;
+  padding: 10px 15px;
+}
+
+main {
+  padding: 30px 0;
+}
+
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-app-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.weather-app-details {
+  font-size: 16px;
+  color: var(--color-primary-light);
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.weather-app-details strong {
+  color: #f65282;
+}
+
+.weather-app-temperature-container {
+  display: flex;
+}
+
+.weather-app-icon {
+  width: 88px;
+  height: 88px;
+}
+
+.weather-app-temperature {
+  font-size: 88px;
+  line-height: 88px;
+  font-weight: bold;
+}
+
+.weather-app-unit {
+  margin-top: 6px;
+  font-size: 28px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  color: var(--color-primary-light);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  font-size: 32px;
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: var(--color-primary-light);
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* .weather-forecast-temperature {
+  padding: 0 10px;
+} */
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
 }
