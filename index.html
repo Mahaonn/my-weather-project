@@ -4,14 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>My Weather App</title>
   </head>
   <body>
     <header class="header">
       <h1 class="title">Weather App</h1>
-      <form class="search-form">
-        <input class="search-city" type="text" placeholder="Enter a city.." />
-        <button class="search-btn">Search</button>
+      <form class="search-form" id="search-form">
+        <input
+          class="search-input"
+          type="text"
+          id="search-input"
+          placeholder="Enter a city.."
+          required
+        />
+        <button type="submit" value="Search" class="search-btn">Search</button>
       </form>
     </header>
     <main>
@@ -19,23 +26,26 @@
         <div class="weather-app">
           <div class="weather-app-data">
             <div>
-              <span id="time">17:00</span>
-              <h2 class="weather-app-city" id="city">London</h2>
-              <span id="description">sunny</span>
-              <img src="./images/sunny-night.png" width="150" />
+              <span id="current-time"></span>
+              <h2 class="weather-app-city" id="current-city"></h2>
+              <span id="weather-description"></span>
+              <div id="weather-icon"></div>
               <p class="weather-app-details">
-                Humidity: <strong id="humidity">87%</strong>, Wind:
-                <strong id="wind-speed">1</strong>
+                Humidity: <strong id="current-humidity"></strong>, Wind:
+                <strong id="wind-speed"><span>km/h</span></strong>
               </p>
             </div>
             <div class="weather-app-temperature-container">
               <div id="icon"></div>
-              <div class="weather-app-temperature" id="temperature"></div>
+              <div
+                class="weather-app-temperature"
+                id="current-temperature"
+              ></div>
               <div class="weather-app-unit">°C</div>
             </div>
           </div>
         </div>
-        <div class="weather-app">
+        <div class="weather-app-forcast">
           <div class="weather-forecast" id="forecast"></div>
         </div>
       </div>
@@ -55,5 +65,6 @@
         >
       </p>
     </footer>
+    <script src="src/main.js"></script>
   </body>
 </html>
