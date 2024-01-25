@@ -4,7 +4,7 @@
 
 :root {
   --color-primary-light: #fff;
-  --color-primary-gray: #858585;
+  --color-primary-gray: rgba(255, 255, 255, 0.661);
 }
 
 body {
@@ -167,7 +167,7 @@ a {
 }
 
 .weather-forecast-icon {
-  width: 60px;
+  width: 180px;
 }
 
 .weather-forecast-temperatures {
@@ -180,7 +180,6 @@ a {
 
 .weather-forecast-temperature span {
   color: var(--color-primary-gray);
-  text-shadow: ;
 }
 
 footer {
