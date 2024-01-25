@@ -87,7 +87,7 @@ a {
 }
 
 .weather-app {
-  background: rgb(0, 0, 0, 0.6);
+  background: rgb(0, 0, 0, 0.75);
   opacity: 75%;
   max-width: 600px;
   margin: 45px auto;
@@ -103,7 +103,7 @@ a {
 }
 
 .weather-app-forcast {
-  background: rgb(0, 0, 0, 0.6);
+  background: rgb(0, 0, 0, 0.75);
   opacity: 75%;
   max-width: 600px;
   margin: 45px auto;

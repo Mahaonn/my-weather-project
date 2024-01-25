@@ -16,9 +16,9 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(windSpeed * 10) / 10;
   currentTimeELement.innerHTML = formatDate(currentDate);
-	iconElement.innerHTML = `<img src="./images/sunny-night.png "class="weather-icon" />`;
-	
-	getForecast(response.data.city)
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -58,6 +58,12 @@ function handleSearchSubmit(event) {
   searchCity(searchInputElement.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
 function getForecast(city) {
   let apiKey = "7b358bb45a2c3obdef533te70adb056a";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -65,26 +71,29 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5)
+      forecastHtml =
+        forecastHtml +
+        `
             <div class="weather-forecast-day">
               <img
-                src="./images/sunny-night.png"
-                width="80"
+                src="${day.condition.icon_url}"
                 class="weather-forecast-icon"
               />
               <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature">
-                  <strong>15º</strong><span>/9º</span>
+                  <strong>${Math.round(
+                    day.temperature.maximum
+                  )}&deg</strong><span>/${Math.round(
+          day.temperature.minimum
+        )}&deg</span>
                 </div>
               </div>
-              <div class="weather-forecast-date">${day}</div>
+              <div class="weather-forecast-date">${formatDay(day.time)}</div>
             </div>
 `;
   });
