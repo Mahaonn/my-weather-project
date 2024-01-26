@@ -16,7 +16,7 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(windSpeed * 10) / 10;
   currentTimeELement.innerHTML = formatDate(currentDate);
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-data-icon" />`;
 
   getForecast(response.data.city);
 }
@@ -71,7 +71,6 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -83,7 +82,7 @@ function displayForecast(response) {
               <img
                 src="${day.condition.icon_url}"
                 class="weather-forecast-icon"
-              />
+              width: 100px;/>
               <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature">
                   <strong>${Math.round(

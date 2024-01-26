@@ -22,32 +22,31 @@
       </form>
     </header>
     <main>
-      <div class="weather-backdrop">
-        <div class="weather-app">
-          <div class="weather-app-data">
-            <div>
-              <span id="current-time"></span>
-              <h2 class="weather-app-city" id="current-city"></h2>
-              <span id="weather-description"></span>
-              <div id="weather-icon"></div>
-              <p class="weather-app-details">
-                Humidity: <strong id="current-humidity"></strong><span>%</span>, Wind:
-                <strong id="wind-speed"></strong><span>km/h</span>
-              </p>
-            </div>
+      <div class="weather-app-backdrop">
+        <div class="weather-app weather-app-data">
+          <div>
+            <h2 class="weather-app-city" id="current-city"></h2>
+            <span id="weather-description"></span>
+          </div>
+          <div id="weather-icon"></div>
+          <div class="weather-app-temperature-details">
+            <div id="current-time"></div>
             <div class="weather-app-temperature-container">
-              <div id="icon"></div>
-              <div
-                class="weather-app-temperature"
-                id="current-temperature"
-              ></div>
-              <div class="weather-app-unit">°C</div>
+              <div class="weather-app-temperature-container">
+                <div
+                  class="weather-app-temperature"
+                  id="current-temperature"
+                ></div>
+                <div class="weather-app-unit">&deg;</div>
+              </div>
+              <div class="weather-app-air-condition">
+                <p>H: <strong id="current-humidity"></strong><span>%</span></p>
+                <p>W: <strong id="wind-speed"></strong><span>km/h</span></p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="weather-app-forcast">
-          <div class="weather-forecast" id="forecast"></div>
-        </div>
+        <div class="weather-app weather-forecast" id="forecast"></div>
       </div>
     </main>
     <footer>
