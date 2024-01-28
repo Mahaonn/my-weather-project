@@ -56,6 +56,7 @@ function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
   searchCity(searchInputElement.value);
+  searchInputElement.value = "";
 }
 
 function formatDay(timestamp) {
