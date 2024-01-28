@@ -55,6 +55,7 @@ html {
 
 .search-input {
   padding: 10px 15px;
+  width: 316px;
   font-weight: 300;
   font-size: 18px;
   color: dimgray;
@@ -90,6 +91,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 70%;
+  min-width: 660px;
   margin: 0 auto;
   padding: 45px 15px 40px 15px;
 }
@@ -165,7 +167,6 @@ html {
 }
 
 .weather-forecast-day {
-
 }
 
 .weather-forecast-icon {

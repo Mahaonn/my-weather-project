@@ -8,64 +8,78 @@
     <title>My Weather App</title>
   </head>
   <body>
-	<div class="wrapper">
-    <header class="header">
-      <h1 class="title">Weather App</h1>
-      <form class="search-form" id="search-form">
-        <input
-          class="search-input"
-          type="text"
-          id="search-input"
-          placeholder="Enter a city.."
-          required
-        />
-        <button type="submit" value="Search" class="search-btn">Search</button>
-      </form>
-    </header>
-    <main class="main">
-      <div class="weather-app-backdrop">
-        <div class="weather-app weather-app-data">
-          <div>
-            <h2 class="weather-app-city" id="current-city"></h2>
-            <span id="weather-description"></span>
-          </div>
-          <div id="weather-icon"></div>
-          <div class="weather-app-temperature-details">
-            <div id="current-time"></div>
-            <div class="weather-app-temperature-container">
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="title">Weather App</h1>
+        <form class="search-form" id="search-form">
+          <input
+            class="search-input"
+            type="text"
+            id="search-input"
+            placeholder="Enter a city.."
+            required
+          />
+          <button type="submit" value="Search" class="search-btn">
+            Search
+          </button>
+        </form>
+      </header>
+      <main class="main">
+        <div class="weather-app-backdrop">
+          <div class="weather-app weather-app-data">
+            <div>
+              <h2 class="weather-app-city" id="current-city"></h2>
+              <span id="weather-description"></span>
+            </div>
+            <div id="weather-icon"></div>
+            <div class="weather-app-temperature-details">
+              <div id="current-time"></div>
               <div class="weather-app-temperature-container">
-                <div
-                  class="weather-app-temperature"
-                  id="current-temperature"
-                ></div>
-                <div class="weather-app-unit">&deg;</div>
-              </div>
-              <div class="weather-app-air-condition">
-                <p>H: <strong id="current-humidity"></strong><span>%</span></p>
-                <p>W: <strong id="wind-speed"></strong><span>km/h</span></p>
+                <div class="weather-app-temperature-container">
+                  <div
+                    class="weather-app-temperature"
+                    id="current-temperature"
+                  ></div>
+                  <div class="weather-app-unit">&deg;</div>
+                </div>
+                <div class="weather-app-air-condition">
+                  <p>
+                    H: <strong id="current-humidity"></strong><span>%</span>
+                  </p>
+                  <p>W: <strong id="wind-speed"></strong><span>km/h</span></p>
+                </div>
               </div>
             </div>
           </div>
+          <div class="weather-app weather-forecast" id="forecast"></div>
         </div>
-        <div class="weather-app weather-forecast" id="forecast"></div>
-      </div>
-    </main>
-    <footer class="footer">
-      <address>
-        Coded by
-        <a class="address-link" href="https://github.com/Mahaonn" target="_blank">
-          Yevheniia Kovzikova</a
-        >, is open-sourced on
-        <a class="address-link" href="https://github.com/Mahaonn/weather-outside" target="_blank"
-          >GitHub</a
-        >
-        and hosted on
-        <a class="address-link" href="https://weather-outside-app.netlify.app/" target="_blank"
-          >Netlify</a
-        >
-      </address>
-    </footer>
-	</div>
+      </main>
+      <footer class="footer">
+        <address>
+          Coded by
+          <a
+            class="address-link"
+            href="https://github.com/Mahaonn"
+            target="_blank"
+          >
+            Yevheniia Kovzikova</a
+          >, is open-sourced on
+          <a
+            class="address-link"
+            href="https://github.com/Mahaonn/weather-outside"
+            target="_blank"
+            >GitHub</a
+          >
+          and hosted on
+          <a
+            class="address-link"
+            href="https://musical-fudge-b34cb4.netlify.app/"
+            target="_blank"
+            >Netlify</a
+          >
+        </address>
+      </footer>
+    </div>
     <script src="src/main.js"></script>
   </body>
 </html>
