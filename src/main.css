@@ -107,6 +107,7 @@ html {
 }
 
 .weather-app-data {
+  position: relative;
   display: flex;
   margin: 0 auto;
   margin-bottom: 45px;
@@ -117,7 +118,10 @@ html {
 }
 
 .weather-app-data-icon {
-  width: 180px;
+  position: absolute;
+  top: 140px;
+  left: 170px;
+  width: 280px;
 }
 
 .weather-app-city {
@@ -167,16 +171,21 @@ html {
 }
 
 .weather-forecast-day {
+  position: relative;
+  padding-top: 20px;
+  width: 80px;
 }
 
 .weather-forecast-icon {
+  position: absolute;
+  top: -50px;
+  left: 0px;
   width: 80px;
 }
 
 .weather-forecast-temperatures {
   text-align: center;
   color: var(--color-primary-light);
-  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -188,9 +197,10 @@ html {
 .weather-forecast-date {
   text-align: center;
   color: var(--color-primary-light);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
-  margin-bottom: 10px;
+  padding-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* footer */
