@@ -18,12 +18,15 @@ function displayTemperature(response) {
   currentTimeELement.innerHTML = formatDate(currentDate);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-data-icon" />`;
 
-  getForecast(response.data.city);
+	getForecast(response.data.city);
+	
+	console.log(response);
 }
 
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
+	let sec = date.getSeconds();
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -31,19 +34,22 @@ function formatDate(date) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
+  if (sec < 10) {
+    sec = `0${sec}`;
+  }
 
   let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
   ];
 
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes}:${sec}`;
 }
 
 function searchCity(city) {
@@ -71,14 +77,22 @@ function getForecast(city) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function updateTime() {
+  let currentTimeElement = document.querySelector("#current-time");
+  let currentDate = new Date();
+  currentTimeElement.innerHTML = formatDate(currentDate);
+}
+
+setInterval(updateTime, 1000);
+
 function displayForecast(response) {
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
     // if (index < 5)
-      forecastHtml =
-        forecastHtml +
-        `
+    forecastHtml =
+      forecastHtml +
+      `
             <div class="weather-forecast-day">
               <img
                 src="${day.condition.icon_url}"
@@ -89,8 +103,8 @@ function displayForecast(response) {
                   <strong>${Math.round(
                     day.temperature.maximum
                   )}&deg</strong><span>/${Math.round(
-          day.temperature.minimum
-        )}&deg</span>
+        day.temperature.minimum
+      )}&deg</span>
                 </div>
               </div>
               <div class="weather-forecast-date">${formatDay(day.time)}</div>
@@ -99,7 +113,7 @@ function displayForecast(response) {
   });
 
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = forecastHtml;
+	forecastElement.innerHTML = forecastHtml;
 }
 
 let searchForm = document.querySelector("#search-form");
