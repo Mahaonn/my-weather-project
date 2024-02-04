@@ -105,8 +105,8 @@ body {
   margin: 0 auto;
   background-color: rgb(94, 99, 182, 0.42);
   backdrop-filter: blur(15px);
-  width: 0%;
-  min-width: 540px;
+  width: 45%;
+  min-width: 550px;
   border: 1px solid rgba(255, 255, 255, 0.468);
   border-radius: 10px;
   padding: 10px 15px;
@@ -122,34 +122,46 @@ body {
   min-height: 350px;
 }
 
+.weather-app-city-forecast {
+	padding-bottom: 20px;
+}
+
 .weather-app-city {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
-  line-height: 72px;
+  /* line-height: 90px; */
 }
 
 .weather-app-data-icon {
   position: absolute;
-  top: 0px;
-  left: 140px;
-  width: 280px;
+  top: 210px;
+  left: 180px;
+  width: 180px;
+}
+
+.weather-app-weather-container {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 180px;
 }
 
 .weather-app-temperature-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .weather-app-temperature-details {
   display: flex;
+  align-items: flex-end;
   flex-direction: column;
   width: 200px;
 }
 .weather-data-date {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 .weather-app-air-condition {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--color-primary-light);
   line-height: 24px;
   font-weight: 500;
@@ -169,7 +181,7 @@ body {
 }
 
 .weather-condition-icon {
-	fill: #fff;
+  fill: #fff;
 }
 
 /* --------------------- */
