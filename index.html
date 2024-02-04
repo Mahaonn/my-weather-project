@@ -43,10 +43,28 @@
                   <div class="weather-app-unit">&deg;</div>
                 </div>
                 <div class="weather-app-air-condition">
-                  <p>
-                    H: <strong id="current-humidity"></strong><span>%</span>
-                  </p>
-                  <p>W: <strong id="wind-speed"></strong><span>km/h</span></p>
+                  <ul>
+                    <li>
+                      <svg
+                        class="weather-condition-icon"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="./images/icons.svg#icon-humidity"></use>
+                      </svg>
+                      <strong id="current-humidity"></strong><span>%</span>
+                    </li>
+                    <li>
+                      <svg
+                        class="weather-condition-icon"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="./images/icons.svg#icon-wind"></use>
+                      </svg>
+                      <strong id="wind-speed"></strong><span>km/h</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

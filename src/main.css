@@ -168,6 +168,10 @@ body {
   color: var(--color-primary-light);
 }
 
+.weather-condition-icon {
+	fill: #fff;
+}
+
 /* --------------------- */
 /* forecast */
 /* --------------------- */
