@@ -6,8 +6,6 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#current-humidity");
   let windElement = document.querySelector("#wind-speed");
   let windSpeed = response.data.wind.speed;
-  let currentTimeELement = document.querySelector("#current-time");
-  let currentDate = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#weather-icon");
 
   cityElement.innerHTML = response.data.city;
@@ -15,18 +13,29 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(windSpeed * 10) / 10;
-  currentTimeELement.innerHTML = formatDate(currentDate);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-data-icon" />`;
 
-	getForecast(response.data.city);
-	
-	console.log(response);
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
-  let minutes = date.getMinutes();
+  let numberOfMonth = date.getDate();
   let hours = date.getHours();
-	let sec = date.getSeconds();
+  let minutes = date.getMinutes();
+  let sec = date.getSeconds();
+  let meridiem = document.querySelector("#meridiem");
+
+  if (hours > 12) {
+    meridiem.innerHTML = "PM";
+  } else {
+    meridiem.innerHTML = "AM";
+  }
+
+  if (hours > 12) {
+    hours = hours - 12;
+  } else {
+    hours = hours;
+  }
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -38,18 +47,32 @@ function formatDate(date) {
     sec = `0${sec}`;
   }
 
-  let days = [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat",
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Nov",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
-
+  let month = months[date.getMonth()];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}:${sec}`;
+
+  let currentHoursElement = document.querySelector("#hours");
+  currentHoursElement.innerHTML = hours;
+  let currentMinElement = document.querySelector("#min");
+  currentMinElement.innerHTML = minutes;
+  let currentSecElement = document.querySelector("#sec");
+  currentSecElement.innerHTML = sec;
+  return `${day}, ${numberOfMonth} ${month}`;
 }
 
 function searchCity(city) {
@@ -90,9 +113,9 @@ function displayForecast(response) {
 
   response.data.daily.forEach(function (day, index) {
     if (index > 0 && index < 7)
-    forecastHtml =
-      forecastHtml +
-      `
+      forecastHtml =
+        forecastHtml +
+        `
             <div class="weather-forecast-day">
               <img
                 src="${day.condition.icon_url}"
@@ -103,8 +126,8 @@ function displayForecast(response) {
                   <strong>${Math.round(
                     day.temperature.maximum
                   )}&deg</strong><span>/${Math.round(
-        day.temperature.minimum
-      )}&deg</span>
+          day.temperature.minimum
+        )}&deg</span>
                 </div>
               </div>
               <div class="weather-forecast-date">${formatDay(day.time)}</div>
@@ -113,7 +136,7 @@ function displayForecast(response) {
   });
 
   let forecastElement = document.querySelector("#forecast");
-	forecastElement.innerHTML = forecastHtml;
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let searchForm = document.querySelector("#search-form");

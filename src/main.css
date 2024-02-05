@@ -19,11 +19,14 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f5c7f7;
 }
-
+li span {
+  font-size: 12px;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
 }
+
 /* --------------------- */
 /* header */
 /* --------------------- */
@@ -107,23 +110,81 @@ body {
   backdrop-filter: blur(15px);
   width: 45%;
   min-width: 550px;
-  border: 1px solid rgba(255, 255, 255, 0.468);
+  box-shadow: inset 0px 0px 10px rgba(245, 199, 247, 0.643);
+  border: 1px solid rgba(245, 199, 247, 0.418);
   border-radius: 10px;
   padding: 10px 15px;
   color: var(--color-primary-light);
 }
 
+.weather-app-container {
+  margin-bottom: 35px;
+}
+
+.weather-app-time {
+  position: relative;
+  /* display: flex;
+  justify-content: center; */
+  color: #000000;
+}
+.weathet-app-hours,
+.weather-app-min {
+  position: absolute;
+  top: -35px;
+  width: 138px;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 600;
+  box-shadow: inset 0px 0px 10px #6a6da5;
+  color: #27296d;
+  background-color: #c8c9de;
+  border: 1px solid #6a6da5;
+  border-radius: 6px;
+}
+.px-wide {
+  letter-spacing: -6px;
+}
+
+.weathet-app-hours {
+  right: 280px;
+}
+
+.weather-app-min {
+  right: 130px;
+}
+
+.weather-app-sec {
+  margin-right: 90px;
+  text-align: end;
+  color: #c8c9de;
+  font-size: 24px;
+}
+
+.weather-app-meridiem {
+  margin-right: 90px;
+  text-align: end;
+  color: #fff;
+}
+
 .weather-app-data {
   position: relative;
   display: flex;
-  margin-bottom: 35px;
   align-items: flex-end;
   justify-content: space-between;
-  min-height: 350px;
+  min-height: 250px;
 }
 
 .weather-app-city-forecast {
-	padding-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.weather-app-city-location {
+  display: flex;
+}
+
+.weather-city-location-icon {
+  margin-right: 5px;
+  fill: #fff;
 }
 
 .weather-app-city {
@@ -131,10 +192,12 @@ body {
   font-weight: 600;
   /* line-height: 90px; */
 }
-
+.weather-description {
+  padding-left: 30px;
+}
 .weather-app-data-icon {
   position: absolute;
-  top: 210px;
+  top: 20px;
   left: 180px;
   width: 180px;
 }
@@ -152,12 +215,13 @@ body {
 
 .weather-app-temperature-details {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   flex-direction: column;
-  width: 200px;
+  width: 180px;
 }
+
 .weather-data-date {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .weather-app-air-condition {

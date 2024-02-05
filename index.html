@@ -26,45 +26,62 @@
       </header>
       <main class="main">
         <div class="weather-app-backdrop">
-          <div class="weather-app weather-app-data">
-            <div class="weather-app-city-forecast">
-              <h2 class="weather-app-city" id="current-city"></h2>
-              <span id="weather-description"></span>
+          <div class="weather-app weather-app-container">
+            <div class="weather-app-time">
+              <div id="hours" class="weathet-app-hours px-wide"></div>
+              <div id="min" class="weather-app-min px-wide"></div>
+              <div id="sec" class="weather-app-sec">00</div>
+              <div id="meridiem" class="weather-app-meridiem"></div>
             </div>
-            <div id="weather-icon"></div>
-            <div class="weather-app-temperature-details">
-              <div id="current-time" class="weather-data-date"></div>
-              <div class="weather-app-weather-container">
-                <div class="weather-app-temperature-container">
-                  <div
-                    class="weather-app-temperature"
-                    id="current-temperature"
-                  ></div>
-                  <div class="weather-app-unit">&deg;</div>
+            <div class="weather-app-data">
+              <div class="weather-app-city-forecast">
+                <div class="weather-app-city-location">
+                  <svg
+                    class="weather-city-location-icon"
+                    width="25"
+                    height="25"
+                  >
+                    <use href="./images/icons.svg#icon-location"></use>
+                  </svg>
+                  <h2 class="weather-app-city" id="current-city"></h2>
                 </div>
-                <div class="weather-app-air-condition">
-                  <ul>
-                    <li>
-                      <svg
-                        class="weather-condition-icon"
-                        width="20"
-                        height="20"
-                      >
-                        <use href="./images/icons.svg#icon-humidity"></use>
-                      </svg>
-                      <strong id="current-humidity"></strong><span>%</span>
-                    </li>
-                    <li>
-                      <svg
-                        class="weather-condition-icon"
-                        width="20"
-                        height="20"
-                      >
-                        <use href="./images/icons.svg#icon-wind"></use>
-                      </svg>
-                      <strong id="wind-speed"></strong><span>km/h</span>
-                    </li>
-                  </ul>
+                <p class="weather-description" id="weather-description"></p>
+              </div>
+              <div id="weather-icon"></div>
+              <div class="weather-app-temperature-details">
+                <div id="current-time" class="weather-data-date"></div>
+                <div class="weather-app-weather-container">
+                  <div class="weather-app-temperature-container">
+                    <div
+                      class="weather-app-temperature px-wide"
+                      id="current-temperature"
+                    ></div>
+                    <div class="weather-app-unit">&deg;</div>
+                  </div>
+                  <div class="weather-app-air-condition">
+                    <ul>
+                      <li>
+                        <svg
+                          class="weather-condition-icon"
+                          width="20"
+                          height="20"
+                        >
+                          <use href="./images/icons.svg#icon-humidity"></use>
+                        </svg>
+                        <strong id="current-humidity"></strong><span>%</span>
+                      </li>
+                      <li>
+                        <svg
+                          class="weather-condition-icon"
+                          width="20"
+                          height="20"
+                        >
+                          <use href="./images/icons.svg#icon-wind"></use>
+                        </svg>
+                        <strong id="wind-speed"></strong><span>km/h</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
