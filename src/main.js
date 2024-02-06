@@ -17,7 +17,6 @@ function displayTemperature(response) {
 
   getForecast(response.data.city);
   changeIcon(response.data.condition.icon);
-  console.log(response.data.condition.icon);
 }
 
 function formatDate(date) {
