@@ -3,9 +3,11 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
 :root {
-  --color-primary-light: #fff;
-  --color-primary-gray: rgba(255, 255, 255, 0.661);
-  --color-secondary-dark: #464646;
+  --color-primary-dark: #27296d;
+  --color-primary-light: #5e63b6;
+  --color-secondary-light: #a393eb;
+  --color-primary-pink: #f5c7f7;
+  --color-secondary-pink: #f2d9f3;
 }
 
 body,
@@ -17,7 +19,7 @@ html,
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f5c7f7;
+  background-color: var(--color-primary-pink);
 }
 li span {
   font-size: 12px;
@@ -37,13 +39,13 @@ li span {
   align-items: center;
   min-width: 660px;
   padding: 40px 15px 50px;
-  background-color: #27296d;
+  background-color: var(--color-primary-dark);
 }
 
 .title {
   margin-bottom: 20px;
   text-align: center;
-  color: #f5c7f7;
+  color: var(--color-primary-pink);
   font-size: 72px;
   font-weight: 700;
   line-height: 1.18;
@@ -76,13 +78,13 @@ li span {
   font-weight: 500;
   line-height: 1;
   color: whitesmoke;
-  background-color: #a393eb;
+  background-color: var(--color-secondary-light);
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
 
 .search-btn:hover {
-  background: #5e63b6;
+  background: var(--color-primary-light);
 }
 
 /* --------------------- */
@@ -114,7 +116,7 @@ li span {
   border: 1px solid rgba(245, 199, 247, 0.418);
   border-radius: 10px;
   padding: 10px 15px;
-  color: var(--color-primary-light);
+  color: var(--color-secondary-pink);
 }
 
 .weather-app-container {
@@ -123,10 +125,9 @@ li span {
 
 .weather-app-time {
   position: relative;
-  /* display: flex;
-  justify-content: center; */
   color: #000000;
 }
+
 .weathet-app-hours,
 .weather-app-min {
   position: absolute;
@@ -136,7 +137,7 @@ li span {
   font-size: 100px;
   font-weight: 600;
   box-shadow: inset 0px 0px 10px #6a6da5;
-  color: #27296d;
+  color: var(--color-primary-dark);
   background-color: #c8c9de;
   border: 1px solid #6a6da5;
   border-radius: 6px;
@@ -184,14 +185,14 @@ li span {
 
 .weather-city-location-icon {
   margin-right: 5px;
-  fill: #fff;
+  fill: var(--color-secondary-pink);
 }
 
 .weather-app-city {
   font-size: 28px;
   font-weight: 600;
-  /* line-height: 90px; */
 }
+
 .weather-description {
   padding-left: 30px;
 }
@@ -226,7 +227,7 @@ li span {
 
 .weather-app-air-condition {
   font-size: 18px;
-  color: var(--color-primary-light);
+  color: var(--color-secondary-pink);
   line-height: 24px;
   font-weight: 500;
 }
@@ -241,11 +242,11 @@ li span {
   padding-right: 10px;
   font-size: 42px;
   line-height: 40px;
-  color: var(--color-primary-light);
+  color: var(-var(--color-secondary-pink));
 }
 
 .weather-condition-icon {
-  fill: #fff;
+  fill: var(--color-secondary-pink);
 }
 
 /* --------------------- */
@@ -256,7 +257,6 @@ li span {
   display: flex;
   justify-content: space-between;
   min-height: 100px;
-  color: var(--color-primary-light);
 }
 
 .weather-forecast-day {
@@ -274,18 +274,18 @@ li span {
 
 .weather-forecast-temperatures {
   text-align: center;
-  color: var(--color-primary-light);
+  color: var(--color-secondary-pink);
   display: flex;
   justify-content: center;
 }
 
 .weather-forecast-temperature span {
-  color: var(--color-primary-gray);
+  color: #c8c9de;
 }
 
 .weather-forecast-date {
   text-align: center;
-  color: var(--color-primary-light);
+  color: var(--color-secondary-pink);
   font-size: 18px;
   line-height: 20px;
   padding-top: 5px;
@@ -304,15 +304,14 @@ li span {
   max-height: 340px;
   text-align: center;
   font-size: 14px;
-  background-color: #5e63b6;
-  color: rgb(255, 255, 255);
+  background-color: var(--color-primary-light);
+  color: #ffffff;
 }
 
 .address-link {
-  color: #f5c7f7;
+  color: var(--color-primary-pink);
 }
 
 .address-link:hover {
-  color: #f976feb2;
   text-decoration: underline;
 }
