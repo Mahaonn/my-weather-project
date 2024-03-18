@@ -104,58 +104,58 @@ function getForecast(city) {
 function changeIcon(icon) {
   let iconElement = document.querySelector("#weather-icon");
   if (icon == "clear-sky-day") {
-    iconElement.innerHTML = `<img src="/images/sunny.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/sunny.png" class="weather-app-data-icon" />`;
   }
   if (icon == "few-clouds-day") {
-    iconElement.innerHTML = `<img src="/images/partly-cloudy.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/partly-cloudy.png" class="weather-app-data-icon" />`;
   }
   if (icon == "scattered-clouds-day") {
-    iconElement.innerHTML = `<img src="/images/cloudy.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/cloudy.png" class="weather-app-data-icon" />`;
   }
   if (icon == "broken-clouds-day") {
-    iconElement.innerHTML = `<img src="/images/partly-cloudy-1.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/partly-cloudy-1.png" class="weather-app-data-icon" />`;
   }
   if (icon == "shower-rain-day") {
-    iconElement.innerHTML = `<img src="/images/hard-rain.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/hard-rain.png" class="weather-app-data-icon" />`;
   }
   if (icon == "rain-day") {
-    iconElement.innerHTML = `<img src="/images/partly-cloudy-rain.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/partly-cloudy-rain.png" class="weather-app-data-icon" />`;
   }
   if (icon == "thunderstorm-day") {
-    iconElement.innerHTML = `<img src="/images/thunderstorm-1.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/thunderstorm-1.png" class="weather-app-data-icon" />`;
   }
   if (icon == "snow-day") {
-    iconElement.innerHTML = `<img src="/images/snow.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/snow.png" class="weather-app-data-icon" />`;
   }
   if (icon == "mist-day") {
-    iconElement.innerHTML = `<img src="/images/mist.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/mist.png" class="weather-app-data-icon" />`;
   }
   if (icon == "clear-sky-night") {
-    iconElement.innerHTML = `<img src="/images/sunny-night.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/sunny-night.png" class="weather-app-data-icon" />`;
   }
   if (icon == "few-clouds-night") {
-    iconElement.innerHTML = `<img src="/images/partly-cloudy-night.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/partly-cloudy-night.png" class="weather-app-data-icon" />`;
   }
   if (icon == "scattered-clouds-night") {
-    iconElement.innerHTML = `<img src="/images/cloudy.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/cloudy.png" class="weather-app-data-icon" />`;
   }
   if (icon == "broken-clouds-night") {
-    iconElement.innerHTML = `<img src="/images/partly-cloudy-night-1.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/partly-cloudy-night-1.png" class="weather-app-data-icon" />`;
   }
   if (icon == "shower-rain-night") {
-    iconElement.innerHTML = `<img src="/images/hard-rain.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/hard-rain.png" class="weather-app-data-icon" />`;
   }
   if (icon == "rain-night") {
-    iconElement.innerHTML = `<img src="/images/partly-cloudy-rain-night.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/partly-cloudy-rain-night.png" class="weather-app-data-icon" />`;
   }
   if (icon == "thunderstorm-night") {
-    iconElement.innerHTML = `<img src="/images/thunderstorm-nigth.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/thunderstorm-nigth.png" class="weather-app-data-icon" />`;
   }
   if (icon == "snow-night") {
-    iconElement.innerHTML = `<img src="/images/partly-cloudy-snow-night.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/partly-cloudy-snow-night.png" class="weather-app-data-icon" />`;
   }
   if (icon == "mist-night") {
-    iconElement.innerHTML = `<img src="/images/mist.png" class="weather-app-data-icon" />`;
+    iconElement.innerHTML = `<img src="./images/mist.png" class="weather-app-data-icon" />`;
   }
 }
 
