@@ -97,7 +97,7 @@ li span {
 
 .weather-app-backdrop {
   flex-direction: column;
-  background-image: url(./images/backdrop.jpg);
+  background-image: url(/images/backdrop.jpg);
   background-size: cover;
   width: 70%;
   min-width: 660px;
