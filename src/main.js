@@ -101,63 +101,35 @@ function getForecast(city) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-function changeIcon(icon) {
-  let iconElement = document.querySelector("#weather-icon");
-  if (icon == "clear-sky-day") {
-    iconElement.innerHTML = `<img src="./images/sunny.png" class="weather-app-data-icon" />`;
+const iconMap = {
+  "clear-sky-day": "./images/sunny.png",
+  "few-clouds-day": "./images/partly-cloudy.png",
+  "scattered-clouds-day": "./images/cloudy.png",
+  "broken-clouds-day": "./images/partly-cloudy-1.png",
+  "shower-rain-day": "./images/hard-rain.png",
+  "rain-day": "./images/partly-cloudy-rain.png",
+  "thunderstorm-day": "./images/thunderstorm.png",
+  "snow-day": "./images/snow.png",
+  "mist-day": "./images/mist.png",
+  "clear-sky-night": "./images/sunny-night.png",
+  "few-clouds-night": "./images/partly-cloudy-night.png",
+  "scattered-clouds-night": "./images/cloudy.png",
+  "broken-clouds-night": "./images/partly-cloudy-night-1.png",
+  "shower-rain-night": "./images/hard-rain.png",
+  "rain-night": "./images/partly-cloudy-rain-night.png",
+  "thunderstorm-night": "./images/thunderstorm-nigth.png",
+  "snow-night": "./images/partly-cloudy-snow-night.png",
+  "mist-night": "./images/mist.png",
+};
+
+const changeIcon = (icon) => {
+  const iconElement = document.getElementById("weather-icon");
+
+  const iconPath = iconMap[icon];
+  if (iconPath) {
+    iconElement.innerHTML = `<img src="${iconPath}" class="weather-app-data-icon"/>`;
   }
-  if (icon == "few-clouds-day") {
-    iconElement.innerHTML = `<img src="./images/partly-cloudy.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "scattered-clouds-day") {
-    iconElement.innerHTML = `<img src="./images/cloudy.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "broken-clouds-day") {
-    iconElement.innerHTML = `<img src="./images/partly-cloudy-1.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "shower-rain-day") {
-    iconElement.innerHTML = `<img src="./images/hard-rain.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "rain-day") {
-    iconElement.innerHTML = `<img src="./images/partly-cloudy-rain.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "thunderstorm-day") {
-    iconElement.innerHTML = `<img src="./images/thunderstorm-1.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "snow-day") {
-    iconElement.innerHTML = `<img src="./images/snow.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "mist-day") {
-    iconElement.innerHTML = `<img src="./images/mist.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "clear-sky-night") {
-    iconElement.innerHTML = `<img src="./images/sunny-night.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "few-clouds-night") {
-    iconElement.innerHTML = `<img src="./images/partly-cloudy-night.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "scattered-clouds-night") {
-    iconElement.innerHTML = `<img src="./images/cloudy.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "broken-clouds-night") {
-    iconElement.innerHTML = `<img src="./images/partly-cloudy-night-1.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "shower-rain-night") {
-    iconElement.innerHTML = `<img src="./images/hard-rain.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "rain-night") {
-    iconElement.innerHTML = `<img src="./images/partly-cloudy-rain-night.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "thunderstorm-night") {
-    iconElement.innerHTML = `<img src="./images/thunderstorm-nigth.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "snow-night") {
-    iconElement.innerHTML = `<img src="./images/partly-cloudy-snow-night.png" class="weather-app-data-icon" />`;
-  }
-  if (icon == "mist-night") {
-    iconElement.innerHTML = `<img src="./images/mist.png" class="weather-app-data-icon" />`;
-  }
-}
+};
 
 function updateTime() {
   let currentTimeElement = document.querySelector("#current-time");
@@ -170,16 +142,18 @@ setInterval(updateTime, 1000);
 function displayForecast(response) {
   let forecastHtml = "";
 
-  response.data.daily.forEach(function (day, index) {
-    if (index > 0 && index < 7)
+  response.data.daily.forEach((day, index) => {
+    if (index > 0 && index < 7) {
+      const iconKey = day.condition.icon.split("/").pop().replace(".png", "");
+      const iconPath = iconMap[iconKey] || day.condition.icon;
+
       forecastHtml =
         forecastHtml +
         `
             <div class="weather-forecast-day">
               <img
-                src="${day.condition.icon_url}"
-                class="weather-forecast-icon"
-              width: 100px;/>
+                src="${iconPath}"
+                class="weather-forecast-icon"/>
               <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature">
                   <strong>${Math.round(
@@ -192,6 +166,7 @@ function displayForecast(response) {
               <div class="weather-forecast-date">${formatDay(day.time)}</div>
             </div>
 `;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
