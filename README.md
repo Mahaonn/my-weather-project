@@ -42,7 +42,26 @@ To run the project locally:
 🚀 Live Demo
 Check out the deployed version: 🔗 https://mahaonn.github.io/my-weather-project/
 
-📸 Preview
+## 📸 Preview  
+![App Screenshot](./images/my-weather-project.jpg)
+
+## 🧭 What I’d Improve Next
+
+This project demonstrates core skills in DOM manipulation, API integration, and dynamic UI rendering. To evolve this app further, I would:
+
+- Refactor logic into modular functions and separate concerns (e.g. API, UI, formatting)
+- Replace innerHTML with safer DOM updates to prevent injection risks
+- Implement centralized error handling for API failures and invalid input
+- Optimize icon mapping with fallback logic and validation
+- Add loading states and user feedback during API calls
+- Introduce unit tests for key functions like `displayTemperature`, `formatDate`, and `getForecast`
+- Migrate to a component-based framework (React) for better scalability
+- Add mobile responsiveness and accessibility improvements
+- Externalize configuration (e.g. API key) for better security and maintainability
+
+These improvements reflect my transition toward scalable architecture, testable code, and production-grade frontend development.
+
 
 📬 Contact
-Created by Yevgeniya Feel free to connect for collaboration or frontend opportunities in EU/UK markets.
+Created by Yevgeniya.
+Open to frontend opportunities across EU/UK markets.
