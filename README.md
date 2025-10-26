@@ -17,13 +17,14 @@ A responsive weather application that displays current weather data for any city
 
 ## 📂 Project Structure
 
+```
 ├── index.html 
 ├── /src 
 │ ├── main.css 
 │ ├── reset.css 
 │ └── main.js 
 ├── /images
-
+```
 
 ## 🛠️ Installation & Local Setup
 
