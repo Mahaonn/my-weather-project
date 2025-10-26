@@ -21,6 +21,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--color-primary-pink);
 }
+
 li span {
   font-size: 12px;
 }
@@ -96,14 +97,27 @@ li span {
 }
 
 .weather-app-backdrop {
+  position: relative;
   flex-direction: column;
-  background-image: url(../images/backdrop.jpg);
-  background-size: cover;
   width: 70%;
   min-width: 660px;
   min-height: 100%;
   margin: 0 auto;
   padding: 45px 15px 90px 15px;
+  overflow: hidden;
+}
+
+.weather-app-backdrop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/backdrop.jpg);
+  background-size: cover;
+  filter: blur(3px);
+  z-index: -1;
 }
 
 .weather-app {
@@ -199,7 +213,7 @@ li span {
 .weather-app-data-icon {
   position: absolute;
   top: 0px;
-  left: 180px;
+  left: 158px;
   width: 180px;
 }
 
